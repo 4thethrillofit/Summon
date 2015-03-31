@@ -12,17 +12,20 @@ class ViewController: UIViewController,
                       UITableViewDelegate,
                       UITableViewDataSource {
 
-    var neons: [Neon] = [
-        Neon(name: "Fei"),
-        Neon(name: "Alex")
-    ]
+    
+    @IBOutlet weak var neonsTableView: UITableView!
+    
+    var neons: [Neon] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         var trello = Trello()
         trello.getCards() {
-            (res) in
-            println(res)
+            (cards) in
+            for card in cards {
+                self.neons.append(Neon(name: card["name"]! as String))
+            }
+            self.neonsTableView.reloadData()
         }
     }
 
