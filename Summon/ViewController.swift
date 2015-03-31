@@ -19,6 +19,11 @@ class ViewController: UIViewController,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var trello = Trello()
+        trello.getCards() {
+            (res) in
+            println(res)
+        }
     }
 
     override func didReceiveMemoryWarning() {
