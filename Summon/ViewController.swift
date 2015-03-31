@@ -16,6 +16,7 @@ class ViewController: UIViewController,
     @IBOutlet weak var neonsTableView: UITableView!
     
     var neons: [Neon] = []
+    let trello = Trello()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +28,9 @@ class ViewController: UIViewController,
     }
     
     func populateCells() {
-        var trello = Trello()
-        
         let fetchCardsQueue: dispatch_queue_t = dispatch_queue_create("fetchCardsQueue", nil)
         dispatch_async(fetchCardsQueue) {
-            trello.getCards() {
+            self.trello.getCards() {
                 (cards) in
                 for card in cards {
                     self.neons.append(Neon(name: card["name"]! as String))
