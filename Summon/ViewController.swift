@@ -19,18 +19,28 @@ class ViewController: UIViewController,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var trello = Trello()
-        trello.getCards() {
-            (cards) in
-            for card in cards {
-                self.neons.append(Neon(name: card["name"]! as String))
-            }
-            self.neonsTableView.reloadData()
-        }
+        populateCells()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func populateCells() {
+        var trello = Trello()
+        
+        let fetchCardsQueue: dispatch_queue_t = dispatch_queue_create("fetchCardsQueue", nil)
+        dispatch_async(fetchCardsQueue) {
+            trello.getCards() {
+                (cards) in
+                for card in cards {
+                    self.neons.append(Neon(name: card["name"]! as String))
+                }
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.neonsTableView.reloadData()
+                }
+            }
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
