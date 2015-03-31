@@ -25,7 +25,8 @@ class ViewController: UIViewController,
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 //        let cell = 
         let cellID = "NeonCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellID) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellID) as NeonTableViewCell
+        cell.neonNameLabel.text = neons[indexPath.row]
         return cell
     }
     
