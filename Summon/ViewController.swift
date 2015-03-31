@@ -12,7 +12,10 @@ class ViewController: UIViewController,
                       UITableViewDelegate,
                       UITableViewDataSource {
 
-    var neons: [String] = ["fei", "alex"]
+    var neons: [Neon] = [
+        Neon(name: "Fei"),
+        Neon(name: "Alex")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +26,9 @@ class ViewController: UIViewController,
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell = 
         let cellID = "NeonCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellID) as NeonTableViewCell
-        cell.neonNameLabel.text = neons[indexPath.row]
+        cell.neonNameLabel.text = neons[indexPath.row].name
         return cell
     }
     
