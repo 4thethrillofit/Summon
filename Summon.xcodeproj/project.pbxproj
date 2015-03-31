@@ -15,6 +15,7 @@
 		A5E879AB1ACA2020002348F7 /* SummonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E879AA1ACA2020002348F7 /* SummonTests.swift */; };
 		A5E879B51ACA26CE002348F7 /* NeonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E879B41ACA26CE002348F7 /* NeonTableViewCell.swift */; };
 		A5E879B71ACA6220002348F7 /* Neon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E879B61ACA6220002348F7 /* Neon.swift */; };
+		A5E879B91ACA6920002348F7 /* Trello.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E879B81ACA6920002348F7 /* Trello.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		A5E879AA1ACA2020002348F7 /* SummonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonTests.swift; sourceTree = "<group>"; };
 		A5E879B41ACA26CE002348F7 /* NeonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeonTableViewCell.swift; sourceTree = "<group>"; };
 		A5E879B61ACA6220002348F7 /* Neon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Neon.swift; sourceTree = "<group>"; };
+		A5E879B81ACA6920002348F7 /* Trello.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trello.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				A5E879961ACA2020002348F7 /* ViewController.swift */,
 				A5E879B41ACA26CE002348F7 /* NeonTableViewCell.swift */,
 				A5E879B61ACA6220002348F7 /* Neon.swift */,
+				A5E879B81ACA6920002348F7 /* Trello.swift */,
 				A5E879981ACA2020002348F7 /* Main.storyboard */,
 				A5E8799B1ACA2020002348F7 /* Images.xcassets */,
 				A5E8799D1ACA2020002348F7 /* LaunchScreen.xib */,
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5E879971ACA2020002348F7 /* ViewController.swift in Sources */,
+				A5E879B91ACA6920002348F7 /* Trello.swift in Sources */,
 				A5E879B71ACA6220002348F7 /* Neon.swift in Sources */,
 				A5E879B51ACA26CE002348F7 /* NeonTableViewCell.swift in Sources */,
 				A5E879951ACA2020002348F7 /* AppDelegate.swift in Sources */,
