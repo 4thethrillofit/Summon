@@ -6,8 +6,9 @@
 //  Copyright (c) 2015 Fei. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Neon {
-    var name: String
+    let name: String
+    var imageData: UIImage
 }

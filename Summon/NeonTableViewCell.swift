@@ -11,6 +11,7 @@ import UIKit
 class NeonTableViewCell: UITableViewCell {
 
     @IBOutlet weak var neonNameLabel: UILabel!
+    @IBOutlet weak var neonImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
