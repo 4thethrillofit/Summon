@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Neons Table View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Summon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NeonsTableViewController" customModule="Summon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NeonCell" rowHeight="250" id="gR9-5H-Ofm" customClass="NeonTableViewCell" customModule="Summon" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NeonCell" rowHeight="250" id="gR9-5H-Ofm" customClass="NeonTableViewCell" customModule="Summon" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gR9-5H-Ofm" id="wmZ-ZL-6eR">
@@ -40,6 +40,7 @@
                                         <connections>
                                             <outlet property="neonImageView" destination="aI8-I9-vow" id="rEv-ue-sCU"/>
                                             <outlet property="neonNameLabel" destination="ZNg-Ql-oWx" id="0xh-JS-Bky"/>
+                                            <segue destination="jBE-CM-PAf" kind="push" id="0HA-3B-xzU"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -59,6 +60,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="646" y="510"/>
+        </scene>
+        <!--Neon Details View Controller-->
+        <scene sceneID="mT4-TG-Pu7">
+            <objects>
+                <viewController id="jBE-CM-PAf" customClass="NeonDetailsViewController" customModule="Summon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zvp-bg-3W7"/>
+                        <viewControllerLayoutGuide type="bottom" id="8fU-jU-8eg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gv6-Rm-VIe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tSq-tY-Omd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7eh-iP-B8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1109" y="510"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xbE-i0-tJJ">

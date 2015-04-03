@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5AD5ACE1ACBE86C00C9B21E /* NeonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD5ACD1ACBE86C00C9B21E /* NeonDetailsViewController.swift */; };
 		A5E879951ACA2020002348F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E879941ACA2020002348F7 /* AppDelegate.swift */; };
-		A5E879971ACA2020002348F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E879961ACA2020002348F7 /* ViewController.swift */; };
+		A5E879971ACA2020002348F7 /* NeonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E879961ACA2020002348F7 /* NeonsTableViewController.swift */; };
 		A5E8799A1ACA2020002348F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E879981ACA2020002348F7 /* Main.storyboard */; };
 		A5E8799C1ACA2020002348F7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5E8799B1ACA2020002348F7 /* Images.xcassets */; };
 		A5E8799F1ACA2020002348F7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E8799D1ACA2020002348F7 /* LaunchScreen.xib */; };
@@ -29,10 +30,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A5AD5ACD1ACBE86C00C9B21E /* NeonDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeonDetailsViewController.swift; sourceTree = "<group>"; };
 		A5E8798F1ACA2020002348F7 /* Summon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Summon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E879931ACA2020002348F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5E879941ACA2020002348F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A5E879961ACA2020002348F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A5E879961ACA2020002348F7 /* NeonsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeonsTableViewController.swift; sourceTree = "<group>"; };
 		A5E879991ACA2020002348F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5E8799B1ACA2020002348F7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A5E8799E1ACA2020002348F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -84,8 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				A5E879941ACA2020002348F7 /* AppDelegate.swift */,
-				A5E879961ACA2020002348F7 /* ViewController.swift */,
+				A5E879961ACA2020002348F7 /* NeonsTableViewController.swift */,
 				A5E879B41ACA26CE002348F7 /* NeonTableViewCell.swift */,
+				A5AD5ACD1ACBE86C00C9B21E /* NeonDetailsViewController.swift */,
 				A5E879B61ACA6220002348F7 /* Neon.swift */,
 				A5E879B81ACA6920002348F7 /* Trello.swift */,
 				A5E879981ACA2020002348F7 /* Main.storyboard */,
@@ -221,9 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5E879971ACA2020002348F7 /* ViewController.swift in Sources */,
+				A5E879971ACA2020002348F7 /* NeonsTableViewController.swift in Sources */,
 				A5E879B91ACA6920002348F7 /* Trello.swift in Sources */,
 				A5E879B71ACA6220002348F7 /* Neon.swift in Sources */,
+				A5AD5ACE1ACBE86C00C9B21E /* NeonDetailsViewController.swift in Sources */,
 				A5E879B51ACA26CE002348F7 /* NeonTableViewCell.swift in Sources */,
 				A5E879951ACA2020002348F7 /* AppDelegate.swift in Sources */,
 			);
@@ -419,6 +423,7 @@
 				A5E879B01ACA2020002348F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5E879B11ACA2020002348F7 /* Build configuration list for PBXNativeTarget "SummonTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +432,7 @@
 				A5E879B31ACA2020002348F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
