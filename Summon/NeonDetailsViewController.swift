@@ -10,9 +10,11 @@ import UIKit
 
 class NeonDetailsViewController: UIViewController {
 
+    var neons: [Neon]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        println("neons: \(neons)")
         // Do any additional setup after loading the view.
     }
 

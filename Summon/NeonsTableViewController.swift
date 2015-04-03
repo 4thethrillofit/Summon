@@ -87,7 +87,16 @@ class NeonsTableViewController: UIViewController,
         return neons.count
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("SELECTED")
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showNeonDetails" {
+            var neonDetailsVC = segue.destinationViewController as NeonDetailsViewController
+            neonDetailsVC.neons = neons
+        } else {
+            println("No such segue was found")
+        }
     }
+    
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        println("showNeonDetails")
+//    }
 }
