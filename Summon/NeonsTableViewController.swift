@@ -36,7 +36,14 @@ class NeonsTableViewController: UIViewController,
                     let (profileImageURL, slackHandle) =
                         self.extractAttachments(card["attachments"] as [NSDictionary])
                     let imageData = self.fetchImage(profileImageURL)
-                    self.neons.append(Neon(name: name, imageData: imageData))
+                    let description = card["desc"]! as String
+                    let specialty = card["labels"]![0]["name"]! as String
+                    let neon = Neon(name: name,
+                                    description: description,
+                                    slackHandle: slackHandle,
+                                    specialty: specialty,
+                                    imageData: imageData)
+                    self.neons.append(neon)
                 }
                 
                 dispatch_async(dispatch_get_main_queue()) {
@@ -90,7 +97,8 @@ class NeonsTableViewController: UIViewController,
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showNeonDetails" {
             var neonDetailsVC = segue.destinationViewController as NeonDetailsViewController
-            neonDetailsVC.neons = neons
+            let indexPath = neonsTableView.indexPathForCell(sender as UITableViewCell)!
+            neonDetailsVC.neon = neons[indexPath.row]
         } else {
             println("No such segue was found")
         }

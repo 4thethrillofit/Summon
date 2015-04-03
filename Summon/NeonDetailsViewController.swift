@@ -10,28 +10,34 @@ import UIKit
 
 class NeonDetailsViewController: UIViewController {
 
-    var neons: [Neon]!
+    var neon: Neon!
+    
+    @IBOutlet weak var specialtyLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionTextField: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("neons: \(neons)")
-        // Do any additional setup after loading the view.
+        setupUI()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setupUI() {
+        let bgImageView = UIImageView(image: neon.imageData)
+        view.insertSubview(bgImageView, atIndex: 0)
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        blurView.frame = bgImageView.bounds
+        view.insertSubview(blurView, aboveSubview: bgImageView)
+        
+        descriptionTextField.editable = false
+        
+        nameLabel.text = neon.name
+        specialtyLabel.text = neon.specialty.uppercaseString
+        descriptionTextField.text = neon.description
     }
-    */
-
 }

@@ -10,5 +10,8 @@ import UIKit
 
 struct Neon {
     let name: String
+    let description: String
+    let slackHandle: String
+    let specialty: String
     var imageData: UIImage
 }
