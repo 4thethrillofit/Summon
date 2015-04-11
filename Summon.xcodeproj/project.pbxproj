@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A517FE741AD522810005A0BD /* FaIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A517FE731AD522810005A0BD /* FaIcons.swift */; };
+		A517FE761AD524770005A0BD /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A517FE751AD524770005A0BD /* fontawesome-webfont.ttf */; };
 		A5AD5ACE1ACBE86C00C9B21E /* NeonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD5ACD1ACBE86C00C9B21E /* NeonDetailsViewController.swift */; };
+		A5E62AD21AD884F8009C8EC8 /* SlackClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E62AD11AD884F8009C8EC8 /* SlackClient.swift */; };
 		A5E879951ACA2020002348F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E879941ACA2020002348F7 /* AppDelegate.swift */; };
 		A5E879971ACA2020002348F7 /* NeonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E879961ACA2020002348F7 /* NeonsTableViewController.swift */; };
 		A5E8799A1ACA2020002348F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E879981ACA2020002348F7 /* Main.storyboard */; };
@@ -30,7 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A517FE731AD522810005A0BD /* FaIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaIcons.swift; sourceTree = "<group>"; };
+		A517FE751AD524770005A0BD /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		A5AD5ACD1ACBE86C00C9B21E /* NeonDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeonDetailsViewController.swift; sourceTree = "<group>"; };
+		A5E62AD11AD884F8009C8EC8 /* SlackClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackClient.swift; sourceTree = "<group>"; };
 		A5E8798F1ACA2020002348F7 /* Summon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Summon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E879931ACA2020002348F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5E879941ACA2020002348F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,8 @@
 				A5E879961ACA2020002348F7 /* NeonsTableViewController.swift */,
 				A5E879B41ACA26CE002348F7 /* NeonTableViewCell.swift */,
 				A5AD5ACD1ACBE86C00C9B21E /* NeonDetailsViewController.swift */,
+				A5E62AD11AD884F8009C8EC8 /* SlackClient.swift */,
+				A517FE731AD522810005A0BD /* FaIcons.swift */,
 				A5E879B61ACA6220002348F7 /* Neon.swift */,
 				A5E879B81ACA6920002348F7 /* Trello.swift */,
 				A5E879981ACA2020002348F7 /* Main.storyboard */,
@@ -102,6 +110,7 @@
 		A5E879921ACA2020002348F7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A517FE751AD524770005A0BD /* fontawesome-webfont.ttf */,
 				A5E879931ACA2020002348F7 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -205,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5E8799A1ACA2020002348F7 /* Main.storyboard in Resources */,
+				A517FE761AD524770005A0BD /* fontawesome-webfont.ttf in Resources */,
 				A5E8799F1ACA2020002348F7 /* LaunchScreen.xib in Resources */,
 				A5E8799C1ACA2020002348F7 /* Images.xcassets in Resources */,
 			);
@@ -225,11 +235,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5E879971ACA2020002348F7 /* NeonsTableViewController.swift in Sources */,
+				A5E62AD21AD884F8009C8EC8 /* SlackClient.swift in Sources */,
 				A5E879B91ACA6920002348F7 /* Trello.swift in Sources */,
 				A5E879B71ACA6220002348F7 /* Neon.swift in Sources */,
 				A5AD5ACE1ACBE86C00C9B21E /* NeonDetailsViewController.swift in Sources */,
 				A5E879B51ACA26CE002348F7 /* NeonTableViewCell.swift in Sources */,
 				A5E879951ACA2020002348F7 /* AppDelegate.swift in Sources */,
+				A517FE741AD522810005A0BD /* FaIcons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@ class NeonTableViewCell: UITableViewCell {
 
     @IBOutlet weak var neonNameLabel: UILabel!
     @IBOutlet weak var neonImageView: UIImageView!
+    @IBOutlet weak var neonSpecialtyLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -21,6 +21,7 @@ class NeonsTableViewController: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         populateCells()
+        neonsTableView.separatorStyle = UITableViewCellSeparatorStyle.None
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,13 +56,13 @@ class NeonsTableViewController: UIViewController,
     
     func extractAttachments(attachments: [NSDictionary]) -> (String, String) {
         // TODO: is there a better way?
-        var imageURL: String = "error.jpg"
-        var slackHandle: String = "error"
+        var imageURL: String = "placeholder.jpg"
+        var slackHandle: String = "placeholder"
         
         for attachment in attachments {
             let attachmentURL = attachment["url"]! as String
             if attachmentURL.lowercaseString.rangeOfString("slack") != nil {
-                slackHandle = attachmentURL
+                slackHandle = split(attachmentURL) { $0 == "=" }[1]
             } else {
                 imageURL = attachmentURL
             }
@@ -85,8 +86,10 @@ class NeonsTableViewController: UIViewController,
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellID = "NeonCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellID) as NeonTableViewCell
-        cell.neonNameLabel.text = neons[indexPath.row].name
-        cell.neonImageView.image = neons[indexPath.row].imageData
+        let neon = neons[indexPath.row]
+        cell.neonNameLabel.text = neon.name
+        cell.neonImageView.image = neon.imageData
+        cell.neonSpecialtyLabel.text = neon.specialty.uppercaseString
         return cell
     }
     
@@ -95,7 +98,7 @@ class NeonsTableViewController: UIViewController,
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showNeonDetails" {
+        if segue.identifier == "ShowNeonDetails" {
             var neonDetailsVC = segue.destinationViewController as NeonDetailsViewController
             let indexPath = neonsTableView.indexPathForCell(sender as UITableViewCell)!
             neonDetailsVC.neon = neons[indexPath.row]
@@ -103,8 +106,4 @@ class NeonsTableViewController: UIViewController,
             println("No such segue was found")
         }
     }
-    
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        println("showNeonDetails")
-//    }
 }
