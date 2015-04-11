@@ -40,6 +40,7 @@ class NeonDetailsViewController: UIViewController {
     
     @IBAction func summonBtnPressed(sender: UIButton) {
         SlackClient.summonUser(neon.slackHandle)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func dismissViewBtnPressed(sender: UIButton) {

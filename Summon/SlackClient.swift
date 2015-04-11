@@ -10,7 +10,7 @@ import Foundation
 
 struct SlackClient {
     static func summonUser(summonee: String, summoner: String="Summoner") {
-        let message = "BLah needs your help!"
+        let message = "\(summoner) needs your help!"
         let url = NSURL(string: "https://hooks.slack.com/services/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")!
         let payload = ["channel": "@\(summonee)",
                        "username": summoner,
@@ -38,7 +38,6 @@ struct SlackClient {
                 return NSString(data: data, encoding: NSUTF8StringEncoding)!
             }
         }
-        
         return ""
     }
 }
