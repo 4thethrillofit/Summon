@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A517FE741AD522810005A0BD /* FaIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A517FE731AD522810005A0BD /* FaIcons.swift */; };
 		A517FE761AD524770005A0BD /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A517FE751AD524770005A0BD /* fontawesome-webfont.ttf */; };
+		A59A19611AE067180018CE4B /* NeonsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A19601AE067180018CE4B /* NeonsCollectionViewController.swift */; };
 		A5AD5ACE1ACBE86C00C9B21E /* NeonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD5ACD1ACBE86C00C9B21E /* NeonDetailsViewController.swift */; };
 		A5E62AD21AD884F8009C8EC8 /* SlackClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E62AD11AD884F8009C8EC8 /* SlackClient.swift */; };
 		A5E879951ACA2020002348F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E879941ACA2020002348F7 /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		A517FE731AD522810005A0BD /* FaIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaIcons.swift; sourceTree = "<group>"; };
 		A517FE751AD524770005A0BD /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		A59A19601AE067180018CE4B /* NeonsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NeonsCollectionViewController.swift; path = ../NeonsCollectionViewController.swift; sourceTree = "<group>"; };
 		A5AD5ACD1ACBE86C00C9B21E /* NeonDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeonDetailsViewController.swift; sourceTree = "<group>"; };
 		A5E62AD11AD884F8009C8EC8 /* SlackClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackClient.swift; sourceTree = "<group>"; };
 		A5E8798F1ACA2020002348F7 /* Summon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Summon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 			children = (
 				A5E879941ACA2020002348F7 /* AppDelegate.swift */,
 				A5E879961ACA2020002348F7 /* NeonsTableViewController.swift */,
+				A59A19601AE067180018CE4B /* NeonsCollectionViewController.swift */,
 				A5E879B41ACA26CE002348F7 /* NeonTableViewCell.swift */,
 				A5AD5ACD1ACBE86C00C9B21E /* NeonDetailsViewController.swift */,
 				A5E62AD11AD884F8009C8EC8 /* SlackClient.swift */,
@@ -239,6 +242,7 @@
 				A5E879B91ACA6920002348F7 /* Trello.swift in Sources */,
 				A5E879B71ACA6220002348F7 /* Neon.swift in Sources */,
 				A5AD5ACE1ACBE86C00C9B21E /* NeonDetailsViewController.swift in Sources */,
+				A59A19611AE067180018CE4B /* NeonsCollectionViewController.swift in Sources */,
 				A5E879B51ACA26CE002348F7 /* NeonTableViewCell.swift in Sources */,
 				A5E879951ACA2020002348F7 /* AppDelegate.swift in Sources */,
 				A517FE741AD522810005A0BD /* FaIcons.swift in Sources */,

@@ -21,7 +21,7 @@ class Trello {
     func getCards(callback: ([NSDictionary]) -> ()) {
         request("\(summonBoardURL)&cards=open&lists=open&card_attachments=true&card_attachment_fields=url") {
             (res) in
-            let cards = res["cards"]! as [NSDictionary]
+            let cards = res["cards"]! as! [NSDictionary]
             callback(cards)
         }
     }
@@ -37,7 +37,7 @@ class Trello {
             var response = NSJSONSerialization.JSONObjectWithData(
                             data,
                             options: NSJSONReadingOptions.MutableContainers,
-                            error: &error) as NSDictionary
+                            error: &error) as! NSDictionary
             callback(response)
         }
         task.resume()

@@ -33,12 +33,12 @@ class NeonsTableViewController: UIViewController,
         dispatch_async(fetchCardsQueue) {
             self.trello.getCards() { (cards) in
                 for card in cards {
-                    let name = card["name"]! as String
+                    let name = card["name"]! as! String
                     let (profileImageURL, slackHandle) =
-                        self.extractAttachments(card["attachments"] as [NSDictionary])
+                        self.extractAttachments(card["attachments"] as! [NSDictionary])
                     let imageData = self.fetchImage(profileImageURL)
-                    let description = card["desc"]! as String
-                    let specialty = card["labels"]![0]["name"]! as String
+                    let description = card["desc"]! as! String
+                    let specialty = card["labels"]![0]["name"]! as! String
                     let neon = Neon(name: name,
                                     description: description,
                                     slackHandle: slackHandle,
@@ -60,7 +60,7 @@ class NeonsTableViewController: UIViewController,
         var slackHandle: String = "placeholder"
         
         for attachment in attachments {
-            let attachmentURL = attachment["url"]! as String
+            let attachmentURL = attachment["url"]! as! String
             if attachmentURL.lowercaseString.rangeOfString("slack") != nil {
                 slackHandle = split(attachmentURL) { $0 == "=" }[1]
             } else {
@@ -85,7 +85,7 @@ class NeonsTableViewController: UIViewController,
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellID = "NeonCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellID) as NeonTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellID) as! NeonTableViewCell
         let neon = neons[indexPath.row]
         cell.neonNameLabel.text = neon.name
         cell.neonImageView.image = neon.imageData
@@ -99,8 +99,8 @@ class NeonsTableViewController: UIViewController,
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowNeonDetails" {
-            var neonDetailsVC = segue.destinationViewController as NeonDetailsViewController
-            let indexPath = neonsTableView.indexPathForCell(sender as UITableViewCell)!
+            var neonDetailsVC = segue.destinationViewController as! NeonDetailsViewController
+            let indexPath = neonsTableView.indexPathForCell(sender as! UITableViewCell)!
             neonDetailsVC.neon = neons[indexPath.row]
         } else {
             println("No such segue was found")

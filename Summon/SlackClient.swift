@@ -35,7 +35,7 @@ struct SlackClient {
         // https://gist.github.com/santoshrajan/97aa46871cde0c0cb8a8
         if NSJSONSerialization.isValidJSONObject(JSONData) {
             if let data = NSJSONSerialization.dataWithJSONObject(JSONData, options: NSJSONWritingOptions.PrettyPrinted, error: nil) {
-                return NSString(data: data, encoding: NSUTF8StringEncoding)!
+                return NSString(data: data, encoding: NSUTF8StringEncoding)! as String
             }
         }
         return ""
