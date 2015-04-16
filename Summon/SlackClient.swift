@@ -11,7 +11,7 @@ import Foundation
 struct SlackClient {
     static func summonUser(summonee: String, summoner: String="Summoner") {
         let message = "\(summoner) needs your help!"
-        let url = NSURL(string: "https://hooks.slack.com/services/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")!
+        let url = NSURL(string: "https://hooks.slack.com/services/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")!
         let payload = ["channel": "@\(summonee)",
                        "username": summoner,
                        "text": message]
