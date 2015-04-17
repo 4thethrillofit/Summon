@@ -50,13 +50,11 @@ class NeonsSelfSelectionTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    { return 1 }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return neons.count
-    }
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    { return neons.count }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! NeonSelfSelectionTableViewCell
@@ -66,17 +64,15 @@ class NeonsSelfSelectionTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50.0
-    }
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
+    { return 65.0 }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Which Neon are you?"
-    }
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    { return "Which Neon are you?" }
     
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let headerView = view as! UITableViewHeaderFooterView
-        headerView.contentView.backgroundColor = UIColor.blackColor()
+        headerView.contentView.backgroundColor = UIColor(red: 39/255, green: 39/255, blue: 39/255, alpha: 1)
         headerView.textLabel.textColor = UIColor(red: 0/255, green: 211/255, blue: 155/255, alpha: 1)
         headerView.textLabel.textAlignment = NSTextAlignment.Center
     }
