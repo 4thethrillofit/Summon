@@ -11,6 +11,7 @@ import UIKit
 class NeonDetailsViewController: UIViewController {
 
     var neon: Neon!
+    var currentNeon: Neon!
     
     @IBOutlet weak var specialtyLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -39,7 +40,7 @@ class NeonDetailsViewController: UIViewController {
     }
     
     @IBAction func summonBtnPressed(sender: UIButton) {
-        SlackClient.summonUser(neon.slackHandle)
+        SlackClient.summonUser(neon.slackHandle, summoner: currentNeon.name)
         dismissViewControllerAnimated(true, completion: nil)
     }
     
