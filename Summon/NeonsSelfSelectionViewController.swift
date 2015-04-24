@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import MBProgressHUD
 
-class NeonsSelfSelectionTableViewController: UITableViewController {
+class NeonsSelfSelectionViewController: UIViewController,
+                                             UITableViewDataSource,
+                                             UITableViewDelegate {
 
     var neons: [Neon] = []
     let trello = Trello()
@@ -18,13 +21,7 @@ class NeonsSelfSelectionTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-//        neonsTableView.contentInset = UIEdgeInsets(top: 108, left: 0, bottom: 0, right: 0)
+        neonsTableView.separatorStyle = UITableViewCellSeparatorStyle.None
         populateCells()
     }
 
@@ -33,6 +30,9 @@ class NeonsSelfSelectionTableViewController: UITableViewController {
     }
     
     func populateCells() {
+        let loadingHUD = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        loadingHUD.mode = MBProgressHUDMode.Indeterminate
+        loadingHUD.labelText = "Fetching Neons data"
         let fetchCardsQueue = dispatch_queue_create("fetchCardsQueue", nil)
         dispatch_async(fetchCardsQueue) {
             self.trello.getCards() { (cards) in
@@ -42,6 +42,7 @@ class NeonsSelfSelectionTableViewController: UITableViewController {
                 }
                 
                 dispatch_async(dispatch_get_main_queue()) {
+                    MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
                     self.neonsTableView.reloadData()
                 }
             }
@@ -50,13 +51,13 @@ class NeonsSelfSelectionTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int
     { return 1 }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     { return neons.count }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! NeonSelfSelectionTableViewCell
         let neon = neons[indexPath.row]
         cell.neonImageView.image = neon.imageData
@@ -64,13 +65,13 @@ class NeonsSelfSelectionTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     { return 65.0 }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     { return "Which Neon are you?" }
     
-    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let headerView = view as! UITableViewHeaderFooterView
         headerView.contentView.backgroundColor = UIColor(red: 39/255, green: 39/255, blue: 39/255, alpha: 1)
         headerView.textLabel.textColor = UIColor(red: 0/255, green: 211/255, blue: 155/255, alpha: 1)

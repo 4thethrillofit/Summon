@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DA202827E2380ADE9F56684 /* Pods_Summon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E3BD983170C5E66A22C163 /* Pods_Summon.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A517FE741AD522810005A0BD /* FaIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A517FE731AD522810005A0BD /* FaIcons.swift */; };
 		A517FE761AD524770005A0BD /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A517FE751AD524770005A0BD /* fontawesome-webfont.ttf */; };
 		A59A19631AE075240018CE4B /* NeonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A19621AE075240018CE4B /* NeonFactory.swift */; };
@@ -22,7 +23,7 @@
 		A5E879B51ACA26CE002348F7 /* NeonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E879B41ACA26CE002348F7 /* NeonTableViewCell.swift */; };
 		A5E879B71ACA6220002348F7 /* Neon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E879B61ACA6220002348F7 /* Neon.swift */; };
 		A5E879B91ACA6920002348F7 /* Trello.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E879B81ACA6920002348F7 /* Trello.swift */; };
-		A5F52D2C1AE17CC9009EE8BD /* NeonsSelfSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F52D2B1AE17CC9009EE8BD /* NeonsSelfSelectionTableViewController.swift */; };
+		A5F52D2C1AE17CC9009EE8BD /* NeonsSelfSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F52D2B1AE17CC9009EE8BD /* NeonsSelfSelectionViewController.swift */; };
 		A5F52D2E1AE17D1F009EE8BD /* NeonSelfSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F52D2D1AE17D1F009EE8BD /* NeonSelfSelectionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,8 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30E3BD983170C5E66A22C163 /* Pods_Summon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Summon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71CC4FF0FDB10A739A2880C9 /* Pods-Summon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Summon/Pods-Summon.debug.xcconfig"; sourceTree = "<group>"; };
+		7F9B21088A728D475BF094BC /* Pods-Summon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Summon/Pods-Summon.release.xcconfig"; sourceTree = "<group>"; };
 		A517FE731AD522810005A0BD /* FaIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaIcons.swift; sourceTree = "<group>"; };
 		A517FE751AD524770005A0BD /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		A556154E1AEAF8A300363AA6 /* Summon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Summon-Bridging-Header.h"; sourceTree = "<group>"; };
 		A59A19621AE075240018CE4B /* NeonFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeonFactory.swift; sourceTree = "<group>"; };
 		A59A19641AE078740018CE4B /* NeonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeonCollectionViewCell.swift; sourceTree = "<group>"; };
 		A5AD5ACD1ACBE86C00C9B21E /* NeonDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeonDetailsViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +61,7 @@
 		A5E879B41ACA26CE002348F7 /* NeonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeonTableViewCell.swift; sourceTree = "<group>"; };
 		A5E879B61ACA6220002348F7 /* Neon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Neon.swift; sourceTree = "<group>"; };
 		A5E879B81ACA6920002348F7 /* Trello.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trello.swift; sourceTree = "<group>"; };
-		A5F52D2B1AE17CC9009EE8BD /* NeonsSelfSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeonsSelfSelectionTableViewController.swift; sourceTree = "<group>"; };
+		A5F52D2B1AE17CC9009EE8BD /* NeonsSelfSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeonsSelfSelectionViewController.swift; sourceTree = "<group>"; };
 		A5F52D2D1AE17D1F009EE8BD /* NeonSelfSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeonSelfSelectionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DA202827E2380ADE9F56684 /* Pods_Summon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +84,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B554D6FDC56BC7D10783FC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30E3BD983170C5E66A22C163 /* Pods_Summon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5B940EA1AE1CD58001FF870 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				A517FE731AD522810005A0BD /* FaIcons.swift */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		A5B940EB1AE1CD76001FF870 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				A5E879B61ACA6220002348F7 /* Neon.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		A5B940EC1AE1CD87001FF870 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				A5E62AD11AD884F8009C8EC8 /* SlackClient.swift */,
+				A59A19621AE075240018CE4B /* NeonFactory.swift */,
+				A5E879B81ACA6920002348F7 /* Trello.swift */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
 		A5E879861ACA2020002348F7 = {
 			isa = PBXGroup;
 			children = (
 				A5E879911ACA2020002348F7 /* Summon */,
 				A5E879A71ACA2020002348F7 /* SummonTests */,
 				A5E879901ACA2020002348F7 /* Products */,
+				FF5B20F1C175FF0FA6B4FFB1 /* Pods */,
+				3B554D6FDC56BC7D10783FC5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,20 +143,19 @@
 			children = (
 				A5E879941ACA2020002348F7 /* AppDelegate.swift */,
 				A5E879961ACA2020002348F7 /* NeonsTableViewController.swift */,
-				A5F52D2B1AE17CC9009EE8BD /* NeonsSelfSelectionTableViewController.swift */,
+				A5F52D2B1AE17CC9009EE8BD /* NeonsSelfSelectionViewController.swift */,
 				A5F52D2D1AE17D1F009EE8BD /* NeonSelfSelectionTableViewCell.swift */,
 				A59A19641AE078740018CE4B /* NeonCollectionViewCell.swift */,
 				A5E879B41ACA26CE002348F7 /* NeonTableViewCell.swift */,
 				A5AD5ACD1ACBE86C00C9B21E /* NeonDetailsViewController.swift */,
-				A5E62AD11AD884F8009C8EC8 /* SlackClient.swift */,
-				A59A19621AE075240018CE4B /* NeonFactory.swift */,
-				A517FE731AD522810005A0BD /* FaIcons.swift */,
-				A5E879B61ACA6220002348F7 /* Neon.swift */,
-				A5E879B81ACA6920002348F7 /* Trello.swift */,
+				A5B940EC1AE1CD87001FF870 /* services */,
+				A5B940EB1AE1CD76001FF870 /* models */,
+				A5B940EA1AE1CD58001FF870 /* utils */,
 				A5E879981ACA2020002348F7 /* Main.storyboard */,
 				A5E8799B1ACA2020002348F7 /* Images.xcassets */,
 				A5E8799D1ACA2020002348F7 /* LaunchScreen.xib */,
 				A5E879921ACA2020002348F7 /* Supporting Files */,
+				A556154E1AEAF8A300363AA6 /* Summon-Bridging-Header.h */,
 			);
 			path = Summon;
 			sourceTree = "<group>";
@@ -145,6 +186,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FF5B20F1C175FF0FA6B4FFB1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71CC4FF0FDB10A739A2880C9 /* Pods-Summon.debug.xcconfig */,
+				7F9B21088A728D475BF094BC /* Pods-Summon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,9 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5E879AE1ACA2020002348F7 /* Build configuration list for PBXNativeTarget "Summon" */;
 			buildPhases = (
+				8D23C1334B6D483238DD92A0 /* Check Pods Manifest.lock */,
 				A5E8798B1ACA2020002348F7 /* Sources */,
 				A5E8798C1ACA2020002348F7 /* Frameworks */,
 				A5E8798D1ACA2020002348F7 /* Resources */,
+				AAC2D76037F866CF25852671 /* Embed Pods Frameworks */,
+				9E8D569AC008D125E5FEB177 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,6 +295,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8D23C1334B6D483238DD92A0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9E8D569AC008D125E5FEB177 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summon/Pods-Summon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAC2D76037F866CF25852671 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summon/Pods-Summon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A5E8798B1ACA2020002348F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -251,7 +352,7 @@
 				A5E879971ACA2020002348F7 /* NeonsTableViewController.swift in Sources */,
 				A59A19651AE078740018CE4B /* NeonCollectionViewCell.swift in Sources */,
 				A5E62AD21AD884F8009C8EC8 /* SlackClient.swift in Sources */,
-				A5F52D2C1AE17CC9009EE8BD /* NeonsSelfSelectionTableViewController.swift in Sources */,
+				A5F52D2C1AE17CC9009EE8BD /* NeonsSelfSelectionViewController.swift in Sources */,
 				A5E879B91ACA6920002348F7 /* Trello.swift in Sources */,
 				A5E879B71ACA6220002348F7 /* Neon.swift in Sources */,
 				A5AD5ACE1ACBE86C00C9B21E /* NeonDetailsViewController.swift in Sources */,
@@ -381,27 +482,34 @@
 		};
 		A5E879AF1ACA2020002348F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71CC4FF0FDB10A739A2880C9 /* Pods-Summon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Summon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Summon/Summon-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		A5E879B01ACA2020002348F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F9B21088A728D475BF094BC /* Pods-Summon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Summon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Summon/Summon-Bridging-Header.h";
 			};
 			name = Release;
 		};

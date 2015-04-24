@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2VJ-fc-o73">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="MaE-IM-qzx">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="fontawesome-webfont.ttf">
@@ -9,51 +9,62 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Neons Self Selection Table View Controller-->
-        <scene sceneID="nlH-em-Utc">
+        <!--Neons Self Selection View Controller-->
+        <scene sceneID="APY-rI-3zd">
             <objects>
-                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="2VJ-fc-o73" customClass="NeonsSelfSelectionTableViewController" customModule="Summon" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="94" sectionHeaderHeight="22" sectionFooterHeight="22" id="iDq-Le-8Xx">
+                <viewController id="MaE-IM-qzx" customClass="NeonsSelfSelectionViewController" customModule="Summon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dor-Xj-WoE"/>
+                        <viewControllerLayoutGuide type="bottom" id="bl5-V5-yYM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kVq-Sd-tRI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.0" green="0.82745098039999998" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NeonSelfSelectionCell" rowHeight="94" id="lAZ-vm-qjd" customClass="NeonSelfSelectionTableViewCell" customModule="Summon" customModuleProvider="target">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lAZ-vm-qjd" id="wbC-uH-1EU">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEx-NA-E5l">
-                                            <rect key="frame" x="98" y="26" width="214" height="39"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kTd-im-PQk">
-                                            <rect key="frame" x="0.0" y="9" width="90" height="73"/>
-                                        </imageView>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </tableViewCellContentView>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="sbv-i7-DHl">
+                                <rect key="frame" x="0.0" y="28" width="320" height="540"/>
+                                <color key="backgroundColor" red="0.1529411765" green="0.1529411765" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NeonSelfSelectionCell" rowHeight="100" id="4fc-Ma-ZUA" customClass="NeonSelfSelectionTableViewCell" customModule="Summon" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4fc-Ma-ZUA" id="vFz-GV-dxm">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEx-NA-E5l">
+                                                    <rect key="frame" x="102" y="30" width="214" height="39"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kTd-im-PQk">
+                                                    <rect key="frame" x="4" y="13" width="90" height="73"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.1529411765" green="0.1529411765" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.1529411765" green="0.1529411765" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="neonImageView" destination="kTd-im-PQk" id="cIz-Y7-MSi"/>
+                                            <outlet property="neonNameLabel" destination="GEx-NA-E5l" id="tdd-Jq-KyQ"/>
+                                            <segue destination="BYZ-38-t0r" kind="modal" identifier="ShowSummonableNeons" modalTransitionStyle="crossDissolve" id="fFL-iL-Q0o"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <outlet property="neonImageView" destination="kTd-im-PQk" id="y1f-IZ-c6j"/>
-                                    <outlet property="neonNameLabel" destination="GEx-NA-E5l" id="ctv-eS-Xdk"/>
-                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="ShowSummonableNeons" modalTransitionStyle="crossDissolve" id="6EZ-Rd-6te"/>
+                                    <outlet property="dataSource" destination="MaE-IM-qzx" id="0Zf-jg-nDY"/>
+                                    <outlet property="delegate" destination="MaE-IM-qzx" id="Z7X-yZ-AKy"/>
                                 </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="2VJ-fc-o73" id="PRH-bK-81w"/>
-                            <outlet property="delegate" destination="2VJ-fc-o73" id="Rv0-Db-NHy"/>
-                        </connections>
-                    </tableView>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1529411765" green="0.1529411765" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
                     <connections>
-                        <outlet property="neonsTableView" destination="iDq-Le-8Xx" id="Zm6-ba-7a9"/>
+                        <outlet property="neonsTableView" destination="sbv-i7-DHl" id="PN3-DA-90n"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FVu-bB-9Xg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CvF-RV-iio" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="161" y="505"/>
+            <point key="canvasLocation" x="191" y="505"/>
         </scene>
         <!--Summon-->
         <scene sceneID="tne-QT-ifu">
@@ -178,7 +189,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="tSq-tY-Omd">
                         <barButtonItem key="backBarButtonItem" title="Neons" id="Bd6-Vr-FTz"/>
