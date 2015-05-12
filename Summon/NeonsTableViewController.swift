@@ -22,7 +22,10 @@ class NeonsTableViewController: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         neonsTableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        if neons.count == 0 { populateCells() }
+        if neons.count == 0 {
+            println(currentNeon)
+            populateCells()
+        }
     }
 
     override func didReceiveMemoryWarning() {
