@@ -34,7 +34,7 @@ class NeonDetailsViewController: UIViewController {
         
         nameLabel.text = neon.name
         specialtyLabel.text = neon.specialty.uppercaseString
-        descriptionTextField.text = neon.description
+        descriptionTextField.text = neon.desc
         dismissViewBtn.setTitle(String(format: "%C", 0xf00d), forState: UIControlState.Normal)
 //        summonBtn.setImage(UIImage(named: "sword-icon"), forState: UIControlState.Normal)
     }

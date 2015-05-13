@@ -13,11 +13,11 @@ struct NeonFactory {
         let name = card["name"]! as! String
         let (profileImageURL, slackHandle) = extractAttachments(card["attachments"] as! [NSDictionary])
         let imageData = fetchImage(profileImageURL)
-        let description = card["desc"]! as! String
+        let desc = card["desc"]! as! String
         let specialty = card["labels"]![0]["name"]! as! String
         return Neon(
             name: name,
-            description: description,
+            desc: desc,
             slackHandle: slackHandle,
             specialty: specialty,
             imageData: imageData
