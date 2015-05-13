@@ -24,10 +24,6 @@ class NeonsSelfSelectionViewController: UIViewController,
         return url.URLByAppendingPathComponent("neonsArray").path!
     }
     
-//    var currentNeonFilePath: String {
-//        let url = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first as! NSURL
-//        return url.URLByAppendingPathComponent("currentNeon").path!
-//    }
     
     @IBOutlet var neonsTableView: UITableView!
     
@@ -38,7 +34,6 @@ class NeonsSelfSelectionViewController: UIViewController,
     }
     
     override func viewDidAppear(animated: Bool) {
-//        let cachedCurrentNeon = NSKeyedUnarchiver.unarchiveObjectWithFile(currentNeonFilePath) as? Neon
         var cachedCurrentNeon: Neon?
         if let currentNeonData = NSUserDefaults.standardUserDefaults().objectForKey("currentNeon") as? NSData {
             cachedCurrentNeon = NSKeyedUnarchiver.unarchiveObjectWithData(currentNeonData) as? Neon
@@ -119,7 +114,6 @@ class NeonsSelfSelectionViewController: UIViewController,
                 neon = neons[indexPath.row]
                 let neonData = NSKeyedArchiver.archivedDataWithRootObject(neon!)
                 NSUserDefaults.standardUserDefaults().setObject(neonData, forKey: "currentNeon")
-//                NSKeyedArchiver.archiveRootObject(neon!, toFile: currentNeonFilePath)
             } else {
                 neon = currentNeon!
             }
